@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Options</title>
+  <style>
+    .backg{
+       background-image: url('412341.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+      opacity: 0.8;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Main Container */
+    .payment-container {
+      width: 600px;
+      height: 650px;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      border: 2px solid #ddd;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .radio-group {
+      margin-bottom: 20px;
+    }
+
+    .radio-group label {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    /* Hidden sections */
+    .input-section {
+      display: none;
+      background-color: #fafafa;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+    }
+
+    .input-section input {
+      display: block;
+      width: 95%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    .input-section label {
+      font-weight: bold;
+    }
+
+    /* Place Order Button */
+    .place-order-btn {
+      display: block;
+      width: 100%;
+      margin-top: 30px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #e60000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(230, 0, 0, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .place-order-btn:hover {
+      background-color: #ff1a1a;
+      box-shadow: 0 0 20px 5px rgba(255, 0, 0, 0.7);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body class="backg">
+
+  <div class="payment-container">
+    <h2>Select Payment Method</h2>
+    
+    <div class="radio-group">
+      <label><input type="radio" name="payment" value="upi"> UPI</label>
+      <label><input type="radio" name="payment" value="cod"> Cash on Delivery</label>
+      <label><input type="radio" name="payment" value="card"> Credit/Debit Card</label>
+    </div>
+
+    <!-- UPI Section -->
+    <div id="upi-section" class="input-section">
+      <label for="upiId">Enter your UPI ID:</label>
+      <input type="text" id="upiId" placeholder="example@upi">
+    </div>
+
+    <!-- COD Section -->
+    <div id="cod-section" class="input-section">
+      <p>No details required for Cash on Delivery.</p>
+    </div>
+
+    <!-- Card Section -->
+    <div id="card-section" class="input-section">
+      <label for="cardName">Cardholder Name:</label>
+      <input type="text" id="cardName" placeholder="John Doe">
+
+      <label for="cardNumber">Card Number:</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+
+      <label for="cardPassword">Card Password:</label>
+      <input type="password" id="cardPassword" placeholder="Enter your card password">
+    </div>
+
+    <button class="place-order-btn">Place Order</button>
+  </div>
+
+  <script>
+    const paymentRadios = document.querySelectorAll('input[name="payment"]');
+    const upiSection = document.getElementById('upi-section');
+    const codSection = document.getElementById('cod-section');
+    const cardSection = document.getElementById('card-section');
+
+    paymentRadios.forEach(radio => {
+      radio.addEventListener('change', function() {
+        upiSection.style.display = 'none';
+        codSection.style.display = 'none';
+        cardSection.style.display = 'none';
+
+        if (this.value === 'upi') {
+          upiSection.style.display = 'block';
+        } else if (this.value === 'cod') {
+          codSection.style.display = 'block';
+        } else if (this.value === 'card') {
+          cardSection.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

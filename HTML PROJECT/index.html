@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .one{
+      background-image: url('designed.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+     }
+
+       .two{
+        width: 100%;
+        background-color:whitesmoke;
+        border-color: black;
+        opacity:0.5 ;
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       }
+
+       .logo{
+        font-size: 35px; 
+        color: brown;
+        font-weight:900 ;
+        letter-spacing: 1px;
+        margin-left: 30px;
+        cursor: none;
+       }
+
+       .liststy{
+        list-style: none;
+        display: flex;
+        gap:115px;
+        display: absolute;
+        }
+
+        .but{
+         
+        font-weight: 1000;
+        border: none;
+        font-size: 25px;
+        text-decoration: none;
+        color: black;font-weight: 700;
+        cursor:pointer;
+        display:block;
+        padding: 10px 15px;
+        text-decoration: none; 
+        }
+
+        .but:hover
+        {
+            color:red;
+            transition:0.2s ;
+            text-shadow: 0 0 10px red;
+            display:block;
+        }
+
+        .anc{
+        text-decoration: none;
+        color: black;font-weight: 700;
+        cursor:pointer;
+        display:block;
+        padding: 10px 15px;
+       }
+
+       .anc:hover{
+        background-color:red;
+       }
+
+       .content{
+        display:none;
+        position: absolute;
+        background-color: gainsboro;
+        min-width: 100px;
+        box-shadow: 2px 2px 5px black;
+        cursor:pointer;
+        font-size: 20px;
+        }
+
+        .dropdown-item:hover .content{
+            display:block;
+            
+        }
+       .innerlog{
+         height:40px;
+        width: 105px;
+        margin-right: 45px;
+        font-weight: 1000;
+        border-radius: 20px;
+        background: brown;
+        color:black;
+        box-shadow: 0 0 15px red;
+        border: none;
+        cursor:pointer;
+       }
+       .innerlog:hover{
+        transition: 0.2s;
+        background: red;
+        text-shadow: 0 0 30px brown;
+       }
+
+       .searchbar{
+        height:40px;
+        width:450px;
+        background-color: white;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-left: 30px;
+        opacity: 0.8;
+        position: relative;
+        }
+
+        .itembox{
+            height: 500px;
+            width: 375px;
+            background-color: white;
+            border-radius: 10px;
+            border-color: none;
+            align-items: center;
+            opacity: 0.9;
+        }
+        
+        .nextbut{
+            height:50px;
+            width: 115px;
+            background-color: white;
+            border-radius: 3px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            margin-left: 680px;
+            padding-left: 7px;
+            padding-top: 4px;
+            border-radius: 15px;
+        }
+
+        .innerbuy{
+         height:40px;
+        width: 105px;
+        margin-right: 45px;
+        font-weight: 1000;
+        border-radius: 5px;
+        background: brown;
+        color:black;
+        box-shadow: 0 0 15px red;
+        border: none;
+        cursor:pointer;
+       }
+       .innerbuy:hover{
+        transition: 0.2s;
+        background: red;
+        text-shadow: 0 0 30px brown;
+       }
+
+         
+    </style>
+<body class="one">
+    <nav class="two">
+    <div class="logo">Naturacoco</div>
+    <ul class="liststy">
+        <li><a href="index.html" class="but"> Home</a></li>
+        <li class="dropdown-item"> 
+        <div class="but">Sell Product</div>
+        
+        <div class="content">
+            <a class="anc">Tender coconut</a>
+            <a class="anc">Coconut fibre</a>
+            <a class="anc">Coconut oil</a>
+        </div>
+    </li>
+
+        <li class="dropdown-item"><a class="but">Contact</a>
+        <div class="content">
+            <a class="anc">Whatsapp</a>
+            <a class="anc">Facebook</a>
+            <a class="anc">Instagram</a>
+        </li>
+
+        <li class="dropdown-item"><a class="but">About</a>
+         <div class="content">
+            <a class="anc">Review Product</a>
+            <a class="anc">Feedback</a>
+            <a class="anc">Signout > </a>
+        </div>   
+        </li>
+    </ul>
+    <div class="login"><a href="login.html">
+        <button class="innerlog">Login</button>
+        </a>
+    </div> 
+    </nav>
+    
+    <div class="searchbar">
+        <input placeholder="Search the item you want to buy or sell" style="font-size: 20px;font-weight: 600px;color: black;height: 38px;width:450px;border-radius: 20px;margin-left: 90px;border: none;">
+    </div>
+    <img src="search.png" style="height: 25px;width: 25px;margin-left: 55px;margin-bottom:47px;margin-top:-32px;color:  black;">
+    <div class="itembox" style="margin-left: 30px;">
+        <h style="font-size: 30px;padding-left:75px;">Tender Coconut</h>
+        <img src="image_0901.jpg" style="height:250px;width: 350px;padding-left: 13px ;padding-top:50px ;">
+        <h style="font-size:25px;padding-left:30px;">RS 40/Piece</h>
+        <div style="padding-left: 125px;padding-top:50px;"><a href="buypage.html">
+        <button class="innerbuy">BUY NOW</button>
+        </a>
+    </div>
+    </div>
+    <div class="itembox" style="margin-left: 1090px;margin-top:-500px;">
+        <h style="font-size: 30px;padding-left:65px;">Coconut Fibre Rope</h>
+        <img src="p3.jpg" style="height:250px;width: 350px;padding-left: 13px ;padding-top:50px ;">
+        <h style="font-size:25px;padding-left:30px;">RS 10/metre</h>
+        <div style="padding-left: 125px;padding-top:50px;"><a href="buypage.html">
+        <button class="innerbuy">BUY NOW</button>
+        </a>
+    </div>
+    </div>
+    <div class="itembox" style="margin-left: 560px;margin-top:-500px;">
+        <h style="font-size: 30px;padding-left:95px;">Raw Coconut</h>
+        <img src="p2.jpg" style="height:250px;width: 350px;padding-left: 13px ;padding-top:50px ;">
+        <h style="font-size:25px;padding-left:30px;">RS 65/Kg</h>
+    <div style="padding-left: 125px;padding-top:50px;"><a href="buypage.html">
+        <button class="innerbuy">BUY NOW</button>
+        </a>
+    </div>
+    </div>
+    <div class="itembox" style="margin-left: 30px;margin-top: 90px;margin-bottom: 90px;">
+        <h style="font-size: 30px;padding-left:120px;">Coir Pith</h>
+       <img src="p4.jpg" style="height:250px;width: 350px;padding-left: 13px ;padding-top:50px ;">
+       <h style="font-size:25px;padding-left:30px;">RS 200/Kg</h>
+       <div style="padding-left: 125px;padding-top:50px;"><a href="buypage.html">
+        <button class="innerbuy">BUY NOW</button>
+        </a>
+    </div>
+    </div>
+    <div class="itembox" style="margin-left: 1090px;margin-top: -590px;margin-bottom: 90px; ">
+        <h style="font-size: 30px;padding-left:90px;">Coconut Fibre</h>
+        <img src="p5.jpg" style="height:250px;width: 350px;padding-left: 13px ;padding-top:50px ;">
+        <h style="font-size:25px;padding-left:30px;">RS 15/kg</h>
+        <div style="padding-left: 125px;padding-top:50px;"><a href="buypage.html">
+        <button class="innerbuy">BUY NOW</button>
+        </a>
+    </div>
+    </div>
+    <div class="itembox" style="margin-left: 560px;margin-top: -590px;margin-bottom: 90px; ">
+        <h style="font-size: 30px;padding-left:100px;">Coconut oil</h>
+        <img src="p6.jpg" style="height:250px;width: 350px;padding-left: 13px ;padding-top:50px ;">
+        <h style="font-size:25px;padding-left:30px;">RS 120/litre</h>
+        <div style="padding-left: 125px;padding-top:50px;"><a href="buypage.html">
+        <button class="innerbuy">BUY NOW</button>
+        </a>
+    </div>
+    </div>
+    <a href="nextp.html" style="font-size: 20px;color: black;text-decoration:none;"> 
+    <button class="nextbut"> Next_Page</button>
+    </a>
+</body>
+</html>    
